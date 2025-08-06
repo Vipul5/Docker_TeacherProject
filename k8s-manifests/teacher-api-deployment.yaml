@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teacher-api-deployment
+  labels:
+    app: teacher-api
+spec:
+  replicas: 4 
+  selector:
+    matchLabels:
+      app: teacher-api
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxSurge: 1 
+      maxUnavailable: 1 
+  template:
+    metadata:
+      labels:
+        app: teacher-api
+    spec:
+      containers:
+        - name: teacher-api
+          image: vipulpatodi/teacher-api:1.0 
+          imagePullPolicy: Always 
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+            - secretRef:
+                name: postgres-secret 
+          livenessProbe: 
+            httpGet:
+              path: /teachers 
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe: 
+            httpGet:
+              path: /teachers
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
