@@ -10,6 +10,10 @@ https://hub.docker.com/repository/docker/vipulpatodi/teacher-postgres/
 http://<externalAPI>/teachers
 http://34.44.135.23/teachers
 
+# Video URL
+https://nagarro-my.sharepoint.com/:v:/p/vipul_patodi/EZjoPxWi0c1Bv1W5bG4d6aIBufB-OLM9MxbZx9nMnXuC4A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=joU5ev
+
+
 # GKE Multi-Tier Teacher Application
 
 This repository contains a multi-tier application consisting of a C# .NET Core API and a PostgreSQL database, designed for deployment on Google Kubernetes Engine (GKE).
