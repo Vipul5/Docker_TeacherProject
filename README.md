@@ -7,7 +7,7 @@ https://hub.docker.com/repository/docker/vipulpatodi/teacher-api/
 https://hub.docker.com/repository/docker/vipulpatodi/teacher-postgres/
 
 # URL for Service API tier to view the records from backend tier.
-http://<externalAPI>/teachers
+http://externalAPI/teachers
 http://34.44.135.23/teachers
 
 # Video URL
